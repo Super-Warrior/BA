@@ -2,6 +2,9 @@
   "name": "ITMS.Mobile",
   "version": "0.0.0",
   "dependencies": {
+		"jquery": "~2.1.1",
+		"knockoutjs":"~2.2.0",
+		"OwlCarousel":""
   },
   "description": "BA",
   "ignore": [
