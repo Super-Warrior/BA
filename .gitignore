@@ -2,3 +2,5 @@
 /src/vendor
 /node_modules
 /src/Web.config
+/src/src.sln
+/src/src.v11.suo
