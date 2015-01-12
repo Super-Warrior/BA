@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ba labs</title>
+<link rel="stylesheet" href="themes/bladecolor.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="js/jquery.mobile.structure-1.4.2.min.css" />
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/Chart.min.js"></script>
+</head>
+<style>
+body {
+	text-align: center
+}
+.canvas {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<script>
+	var randomScalingFactor = function(){ return Math.round(Math.random()*50)};
+		var lineChartData = {
+			labels : ["1AM","2AM","3AM","4AM","5AM","6AM","7AM","1AM","2AM","3AM","4AM","5AM","6AM","7AM"],
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					label: "My Second dataset",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+
+		}
+
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true,
+			showScale: true,
+			scaleShowGridLins: false,
+		 
+			 
+			 
+		});
+	}
+	</script>
+<body>
+<div data-role="page" data-theme="a" id="one">
+<div data-role="footer" data-position="fixed" data-theme="b">
+  <div data-role="navbar" data-iconpos="bottom">
+    <ul>
+      <li><a href="#popupMenu" data-rel="popup" data-position-to="window" data-transition="slideup" data-position-to="origin" data-icon="grid"> </a></li>
+    </ul>
+  </div>
+  <div data-role="popup" id="popupMenu" data-theme="a"  data-overlay-theme="a">
+    <ul data-role="listview" data-inset="true" data-theme="b" style="min-width:240px;">
+      <li data-icon="plus"><a href="#">添加Eq</a></li>
+      <li data-icon="home"><a href="signin.html" rel="external">主菜单</a></li>
+    </ul>
+  </div>
+</div>
+<div data-role="content">
+  <p align="center"><a href="#two"><img class="popphoto" src="images/balogo.png" height="25px"></a></p>
+  <div class="canvas">
+    <canvas id="canvas"  height="auto" width="auto"></canvas>
+  </div>
+  <ul data-role="listview" data-inset="true" style="min-width:240px;">
+    <li data-icon="eye"><a href="#" ><img src="Images/Glyphish/icons/116-controller@2x.png" alt="Germany" class="ui-li-icon">主卧<span class="ui-li-count">32度 | 55% | 优</span></a></li>
+  </ul>
+  <ul data-role="listview" data-theme="a" data-split-icon="bars" data-split-theme="b" data-inset="true" style="min-width:240px;">
+    <li data-role="list-divider" data-theme="a">我的设备</li>
+    <li><a href="ec.html" rel="external" data-transition="flip"><img src="Images/Glyphish/icons/196-radiation@2x.png" alt="Germany" class="ui-li-icon">净化器<span class="ui-li-count"><font color="#999999">关闭</font></span></a> <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a> </li>
+    <li><a href="ec.html" rel="external"><img src="Images/Glyphish/icons/81-dashboard@2x.png" alt="Germany" class="ui-li-icon">空调<span class="ui-li-count">28度 | 制冷 | 大风</span></a> <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="fade">Purchase album</a> </li>
+  </ul>
+  <div data-role="popup" id="purchase" data-theme="c" data-overlay-theme="b">
+    <ul data-role="listview" data-theme="b" data-inset="true" style="min-width:210px;">
+      <li data-role="list-divider">设备选项</li>
+      <li data-icon="check"><a href="#">自动模式</a></li>
+      <li data-icon="grid"><a href="#">控制面板</a></li>
+      <li data-icon="clock"><a href="#">ba LABS曲线</a></li>
+    </ul>
+  </div>
+  <div class="ui-nodisc-icon ui-alt-icon"><!-- Classes added to the wrapper -->
+    <p align="center"> &nbsp &nbsp <a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-recycle ui-btn-icon-notext ui-btn-inline">next</a></p>
+  </div>
+</div>
+</body>
+</html>

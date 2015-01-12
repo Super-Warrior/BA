@@ -1,0 +1,16 @@
+{
+  "name": "ITMS.Mobile",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "description": "BA",
+  "ignore": [
+    "*.md",
+    "*.json",
+    "Gruntfile.js",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ba labs</title>
+<link rel="stylesheet" href="themes/bladecolor.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="js/jquery.mobile.structure-1.4.2.min.css" />
+<link href="OWL/assets/css/custom.css" rel="stylesheet">
+
+<!-- Owl Carousel Assets -->
+
+<link href="OWL/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="OWL/owl-carousel/owl.theme.css" rel="stylesheet">
+<link href="OWL/owl-carousel/owl.transitions.css" rel="stylesheet">
+<link rel="stylesheet" href="CSS/jqm-demos.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/Chart.min.js"></script>
+</head>
+<style>
+body {
+	text-align: center
+}
+.canvas {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+</style>
+
+<body>
+<div data-role="page" data-theme="a" id="one">
+<div data-role="footer" data-position="fixed" data-theme="b">
+  <div data-role="navbar" data-iconpos="bottom">
+    <ul>
+      <li><a href="#popupMenu" data-rel="popup" data-position-to="window" data-transition="slideup" data-position-to="origin" data-icon="grid"> </a></li>
+    </ul>
+  </div>
+  <div data-role="popup" id="popupMenu" data-theme="a"  data-overlay-theme="a">
+    <ul data-role="listview" data-inset="true" data-theme="b" style="min-width:240px;">
+      <li data-icon="home"><a href="signin.html" rel="external">主菜单</a></li>
+    </ul>
+  </div>
+</div>
+<div data-role="content">
+  <p align="center"><a href="#"><img class="popphoto" src="images/balogo.png" height="25px"></a></p>
+  <div id="owl-demo" class="owl-carousel owl-theme">
+    <div class="item">
+      <p align="center"><a href="#"><img class="popphoto" src="Images/bamain.png" height="60px"></a></p>
+    </div>
+    <div class="item">
+      <p align="center"><a href="#"><img class="popphoto" src="Images/bamain.png" height="60px"></a></p>
+    </div>
+    <div class="item">
+      <p align="center"><a href="#"><img class="popphoto" src="Images/main.png" height="60px"></a></p>
+    </div>
+  </div>
+  <div class="ui-grid-a ui-responsive">
+    <div class="ui-block-a">
+      <div class="jqm-block-content" >
+        <h3>购买Ba</h3>
+        <div data-demo-html="true">
+          <p align="center"><a href="#"><img class="popphoto" src="Images/badevice.png" height="60px"></a></p>
+        </div>
+        <!-- /demo-html --> 
+      </div>
+    </div>
+    <div class="ui-block-b">
+      <div class="jqm-block-content" data-theme="b">
+        <h3>Ba inside电器</h3>
+        <div data-demo-html="true">
+          <p align="center"><a href="#"><img class="popphoto" src="Images/bainside.png" height="60px"></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-block-a">
+      <div class="jqm-block-content" >
+        <h3>节能耗材</h3>
+        <div data-demo-html="true">
+          <p align="center"><a href="#"><img class="popphoto" src="Images/parts.png" height="60px"></a></p>
+        </div>
+        <!-- /demo-html --> 
+      </div>
+    </div>
+    <div class="ui-block-b">
+      <div class="jqm-block-content" >
+        <h3>生活助手</h3>
+        <div data-demo-html="true">
+          <p align="center"><a href="http://myqiaqia.com/Page/Life/LifeService.aspx" rel="external"><img class="popphoto" src="Images/pay.png" height="60px"></a></p>
+        </div>
+        <!-- /demo-html --> 
+      </div>
+    </div>
+  </div>
+  <ul data-role="listview" data-inset="true" style="min-width:240px;" data-theme="c">
+    <li data-icon="eye"><a href="#"><img src="Images/Glyphish/icons/85-trophy@2x.png" alt="Germany" class="ui-li-icon">Ba Coins<span class="ui-li-count"><b>31002</b> pts</span></a> <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="fade">Purchase album</a> </li>
+  </ul>
+</div>
+<script src="OWL/owl-carousel/owl.carousel.js"></script> 
+
+<!-- Demo -->
+
+<style>
+    #owl-demo.item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    </style>
+<script>
+$(document).ready(function() {
+  $("#owl-demo").owlCarousel({
+        autoPlay : 2000,
+        stopOnHover : true,	 
+		 pagination : false,
+        paginationSpeed : 300,
+        goToFirstSpeed : 1000,
+        singleItem : true,
+        transitionStyle:"fade"
+      });
+});
+</script> 
+<script src="OWL/assets/js/bootstrap-collapse.js"></script> 
+<script src="OWL/assets/js/bootstrap-transition.js"></script> 
+<script src="OWL/assets/js/bootstrap-tab.js"></script> 
+<script src="OWL/assets/js/google-code-prettify/prettify.js"></script> 
+<script src="OWL/assets/js/application.js"></script>
+</body>
+</html>

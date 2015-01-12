@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iTMS</title>
+<link rel="stylesheet" href="themes/bladecolor.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="js/jquery.mobile.structure-1.4.2.min.css" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme="a" >
+  <div data-role="panel" id="panelLogin" data-position="left" data-display="overlay" > 
+    <!-- panel content goes here -->
+    <div class="ui-grid-c">
+      <div class="ui-block-a">
+        <p align="center"><a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop"><img class="popphoto" src="images/avatar.png" height="40px" /></a></p>
+      </div>
+      <p align="center"><font color="#999999" size="3"><strong>账户名</strong></font><br>
+        <font color="#0099FF" size="1">BP实体名称</font> </p>
+    </div>
+    <!-- /grid-a -->
+    
+ 
+    <ul data-role="listview" data-inset="true" data-theme="b" class="ui-nodisc-icon ui-alt-icon">
+      <li><a href="#popuprole" data-rel="popup" data-transition="pop" data-position-to="window"><img src="images/Glyphish/icons/97-puzzle.png" alt="setting" class="ui-li-icon ui-corner-none"><font size="2">用户角色</font></a></li>
+      <li><a href="#"><img src="images/Glyphish/icons/15-tags.png" alt="setting" class="ui-li-icon ui-corner-none"><font size="2">关于iTMS</font></a></li>
+    </ul>
+    <div class="ui-nodisc-icon ui-alt-icon"><!-- Classes added to the wrapper -->
+      <p align="center"> &nbsp; <a href="#popupsignout" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-power ui-btn-icon-notext ui-btn-inline">Sign out</a></p>
+    </div>
+  </div>
+  <!-- /panel -->
+  
+  <div data-role="panel" id="panelgrid" data-position="right" data-display="push" data-theme="a"> 
+    <!-- panel content goes here -->
+    <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/44-shoebox@2x.png" height="40px" /></a><br>
+      <font color="#999999" size="2">我的任务<br>
+      <b>iTMS</b></font></p>
+    <ul data-role="listview" data-inset="true" data-theme="b" class="ui-nodisc-icon ui-alt-icon">
+      <li><a href="#"><img src="images/Glyphish/icons/113-navigation.png" alt="ongoing" class="ui-li-icon ui-corner-none"><font size="2">执行中任务</font></a></li>
+      <li><a href="#"><img src="images/Glyphish/icons/83-calendar.png" alt="plan" class="ui-li-icon"><font size="2">已计划任务</font></a></li>
+    </ul>
+    <div class="ui-nodisc-icon ui-alt-icon"><!-- Classes added to the wrapper -->
+      <p align="center"> &nbsp; <a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline">back</a></p>
+    </div>
+  </div>
+  <!-- /panel -->
+  
+  <div data-role="panel" id="paneleye" data-position="right" data-display="push" data-theme="a"> 
+    <!-- panel content goes here -->
+    <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/16-line-chart@2x.png" height="40px" /></a><br>
+      <font color="#999999" size="2">我的关注<br>
+      <b>iTMS</b></font></p>
+    <ul data-role="listview" data-inset="true" data-theme="b" class="ui-nodisc-icon ui-alt-icon">
+      <li><a href="#"><img src="images/Glyphish/icons/122-stats.png" alt="ongoing" class="ui-li-icon ui-corner-none"><font size="2">业务KPI</font></a></li>
+      <li><a href="#"><img src="images/Glyphish/icons/84-lightbulb.png" alt="plan" class="ui-li-icon"><font size="2">事件管理</font></a></li>
+    </ul>
+    <div class="ui-nodisc-icon ui-alt-icon"><!-- Classes added to the wrapper -->
+      <p align="center"> &nbsp; <a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline">back</a></p>
+    </div>
+  </div>
+  <!-- /panel -->
+  
+  <div data-role="popup" id="popuprole" data-overlay-theme="a">
+    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+      <li data-role="list-divider" data-theme="b">我拥有的权限</li>
+      <li data-icon="check"><a href="#"><font size="2">A001运输计划</font></a></li>
+      <li data-icon="check"><a href="#"><font size="2">A002运输执行</font></a></li>
+    </ul>
+  </div>
+  <div data-role="popup" id="popupLogin" data-theme="b" data-overlay-theme="a" class="ui-corner-all">
+    <form>
+      <div style="padding:10px 20px;">
+        <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/145-persondot@2x.png" height="40px" /></a></p>
+        <label for="un" class="ui-hidden-accessible">Username:</label>
+        <input type="text" name="user" id="un" value="" placeholder="用户名" data-theme="b">
+        <label for="pw" class="ui-hidden-accessible">Password:</label>
+        <input type="password" name="pass" id="pw" value="" placeholder="密码" data-theme="b">
+        <p align="center"><a href="#" class="ui-btn ui-shadow  ui-corner-all ui-icon-check ui-btn-icon-left">登录</a></p>
+      </div>
+    </form>
+  </div>
+  <div data-role="popup" id="popupsignout" data-theme="b" data-overlay-theme="a" class="ui-corner-all">
+    <form>
+      <div style="padding:10px 20px;">
+        <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/63-runner@2x.png" height="40px" /></a><br>
+          <font color="#999999" size="2">是否退出当前账号?</font></p>
+        <p align="center"><a href="#" data-rel="back" class="ui-btn ui-shadow  ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline">取消</a><a href="#" class="ui-btn ui-shadow ui-btn-a ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline">确认</a></p>
+      </div>
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <div data-role="navbar" data-iconpos="bottom">
+      <ul>
+        <li><a href="#panelLogin" data-icon="user"> </a></li>
+        <li><a href="#panelgrid" data-icon="calendar"> </a></li>
+        <li><a href="#paneleye" data-icon="eye"> </a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <p align="center"><a href="#"><img class="popphoto" src="images/itmslogo.png" height="25px"></a></p>
+    <br>
+    <p align="center"><a href="#"><img class="popphoto" src="images/main.png" height="180px"></a></p>
+  </div>
+</div>
+</body>
+</html>
