@@ -4,7 +4,8 @@
   "dependencies": {
 		"jquery": "~2.1.1",
 		"knockoutjs":"~2.2.0",
-		"OwlCarousel":""
+		"OwlCarousel":"",
+		"Chart.js":"~1.0.1"
   },
   "description": "BA",
   "ignore": [

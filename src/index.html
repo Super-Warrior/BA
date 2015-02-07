@@ -1,89 +1,119 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ba labs</title>
-<link rel="stylesheet" href="themes/bladecolor.min.css" />
-<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="js/jquery.mobile.structure-1.4.2.min.css" />
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ba labs</title>
+    <link rel="stylesheet" href="themes/bladecolor.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile.structure-1.4.2.min.css" />
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+
 </head>
 <body>
-<div data-role="page" data-theme="a" >
-  <div data-role="panel" id="panelhome" data-position="left" data-display="overlay" >
-    <p align="center"><a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop"><img class="popphoto" src="images/panda.png" height="90px"></a><br>
-      Blade<br>
-      <br>
-    </p>
-    <ul data-role="listview" data-inset="true" data-theme="a" class="ui-nodisc-icon ui-alt-icon">
-      <li><a href="baroom1.html" rel="external"><img src="images/Glyphish/icons/160-voicemail-2@2x.png" alt="setting" class="ui-li-icon ui-corner-none">我的Ba</a></li>
-      <li><a href="#" ><img src="images/Glyphish/icons/51-outlet@2x.png" alt="setting" class="ui-li-icon ui-corner-none">我的Eq</a></li>
-      <li><a href="balabs.html" rel="external" ><img src="images/Glyphish/icons/122-stats@2x.png" alt="setting" class="ui-li-icon ui-corner-none">Ba LABS曲线</a></li>
-    </ul>
-    <br>
-    <br>
-    <p align="center"><a href="#"><img class="popphoto" src="images/balogo.png" height="20px"></a></p>
-  </div>
-  <!-- /panel -->
-  
-  <div data-role="panel" id="panelapp" data-position="right" data-display="overlay" data-theme="a"> 
-    <!-- panel content goes here -->
-    <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/198-card-spades@2x.png" height="40px"></a><br>
-      <font color="#999999" size="2">我的应用</p>
-    <ul data-role="listview" data-inset="true" data-theme="b" class="ui-nodisc-icon ui-alt-icon">
-      <li><a href="#"><img src="images/Glyphish/icons/77-ekg@2x.png" alt="ongoing" class="ui-li-icon ui-corner-none">我的应用</a></li>
-      <li><a href="#"><img src="images/Glyphish/icons/57-download@2x.png" alt="plan" class="ui-li-icon">应用下载</a></li>
-      <li><a href="bastore.html" rel="external"><img src="images/Glyphish/icons/119-piggy-bank@2x.png" alt="plan" class="ui-li-icon">Ba商城</a></li>
-    </ul>
-    <br>
-    <br>
-    <p align="center"><a href="#"><img class="popphoto" src="images/balogo.png" height="20px"></a></p>
-  </div>
-  <!-- /panel -->
-  
-  <div data-role="popup" id="popupLogin" data-theme="a" data-overlay-theme="a" class="ui-corner-all">
-    <form>
-      <div style="padding:10px 20px;">
-        <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/145-persondot@2x.png" height="40px" /></a></p>
-        <label for="un" class="ui-hidden-accessible">Username:</label>
-        <input type="text" name="user" id="un" value="" placeholder="用户名" data-theme="a">
-        <label for="pw" class="ui-hidden-accessible">Password:</label>
-        <input type="password" name="pass" id="pw" value="" placeholder="密码" data-theme="a">
-        <p align="center"><a href="#" class="ui-btn ui-shadow  ui-corner-all ui-icon-check ui-btn-icon-left">登录</a></p>
-        <p align="center"><a href="register.html" rel="external" class="ui-link"><font size="1">注册新用户</font></a></p>
-      </div>
-    </form>
-  </div>
-  <div data-role="popup" id="popupsignout" data-theme="b" data-overlay-theme="a" class="ui-corner-all">
-    <form>
-      <div style="padding:10px 20px;">
-        <p align="center"><a href="#"><img class="popphoto" src="images/Glyphish/icons/63-runner@2x.png" height="40px" /></a><br>
-          <font color="#999999" size="2">是否退出当前账号?</font></p>
-        <p align="center"><a href="#" data-rel="back" class="ui-btn ui-shadow  ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline">取消</a><a href="#" class="ui-btn ui-shadow ui-btn-a ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline">确认</a></p>
-      </div>
-    </form>
-  </div>
-  <div data-role="footer" data-position="fixed" data-theme="b">
-    <div data-role="navbar" data-theme="c" data-iconpos="bottom">
-      <ul>
-        <li><a href="#panelhome" data-icon="home"> </a></li>
-        <li><a href="#popupMenu" data-rel="popup" data-position-to="window" data-transition="slideup" data-position-to="origin" data-icon="grid"> </a></li>
-        <li><a href="#panelapp" data-icon="heart"> </a></li>
-      </ul>
+    <div data-role="page" data-theme="a">
+        <div data-role="panel" id="panelhome" data-position="left" data-display="overlay">
+            <p align="center">
+                <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop">
+                    <img alt="" class="popphoto" src="images/panda.png" height="90"></a><br>
+                Blade<br>
+                <br>
+            </p>
+            <ul data-role="listview" data-inset="true" data-theme="a" class="ui-nodisc-icon ui-alt-icon">
+                <li><a href="baRooms.html" rel="external">
+                    <img src="images/Glyphish/icons/160-voicemail-2@2x.png" alt="setting" class="ui-li-icon ui-corner-none">我的Ba</a></li>
+                <li><a href="#">
+                    <img src="images/Glyphish/icons/51-outlet@2x.png" alt="setting" class="ui-li-icon ui-corner-none">我的Eq</a></li>
+                <li><a href="balabs.html" rel="external">
+                    <img src="images/Glyphish/icons/122-stats@2x.png" alt="setting" class="ui-li-icon ui-corner-none">Ba LABS曲线</a></li>
+            </ul>
+            <br>
+            <br>
+            <p align="center">
+                <a href="#">
+                    <img class="popphoto" src="images/balogo.png" height="20"></a>
+            </p>
+        </div>
+        <!-- /panel -->
+
+        <div data-role="panel" id="panelapp" data-position="right" data-display="overlay" data-theme="a">
+            <!-- panel content goes here -->
+            <p align="center">
+                <a href="#">
+                    <img class="popphoto" src="images/Glyphish/icons/198-card-spades@2x.png" height="40"></a><br>
+                <font color="#999999" size="2">我的应用 </font>
+            </p>
+            <ul data-role="listview" data-inset="true" data-theme="b" class="ui-nodisc-icon ui-alt-icon">
+                <li><a href="#">
+                    <img src="images/Glyphish/icons/77-ekg@2x.png" alt="ongoing" class="ui-li-icon ui-corner-none">我的应用</a></li>
+                <li><a href="#">
+                    <img src="images/Glyphish/icons/57-download@2x.png" alt="plan" class="ui-li-icon">应用下载</a></li>
+                <li><a href="bastore.html" rel="external">
+                    <img src="images/Glyphish/icons/119-piggy-bank@2x.png" alt="plan" class="ui-li-icon">Ba商城</a></li>
+            </ul>
+            <br>
+            <br>
+            <p align="center">
+                <a href="#">
+                    <img class="popphoto" src="images/balogo.png" height="20"></a>
+            </p>
+        </div>
+        <!-- /panel -->
+
+        <div data-role="popup" id="popupLogin" data-theme="a" data-overlay-theme="a" class="ui-corner-all">
+            <form>
+                <div style="padding: 10px 20px;">
+                    <p align="center">
+                        <a href="#">
+                            <img class="popphoto" src="images/Glyphish/icons/145-persondot@2x.png" height="40" /></a>
+                    </p>
+                    <label for="un" class="ui-hidden-accessible">Username:</label>
+                    <input type="text" name="user" id="un" value="" placeholder="用户名" data-theme="a">
+                    <label for="pw" class="ui-hidden-accessible">Password:</label>
+                    <input type="password" name="pass" id="pw" value="" placeholder="密码" data-theme="a">
+                    <p align="center"><a href="#" class="ui-btn ui-shadow  ui-corner-all ui-icon-check ui-btn-icon-left">登录</a></p>
+                    <p align="center"><a href="register.html" rel="external" class="ui-link"><font size="1">注册新用户</font></a></p>
+                </div>
+            </form>
+        </div>
+        <div data-role="popup" id="popupsignout" data-theme="b" data-overlay-theme="a" class="ui-corner-all">
+            <form>
+                <div style="padding: 10px 20px;">
+                    <p align="center">
+                        <a href="#">
+                            <img class="popphoto" src="images/Glyphish/icons/63-runner@2x.png" height="40" /></a><br>
+                        <font color="#999999" size="2">是否退出当前账号?</font>
+                    </p>
+                    <p align="center"><a href="#" data-rel="back" class="ui-btn ui-shadow  ui-corner-all ui-icon-delete ui-btn-icon-left ui-btn-inline">取消</a><a href="#" class="ui-btn ui-shadow ui-btn-a ui-corner-all ui-icon-check ui-btn-icon-left ui-btn-inline">确认</a></p>
+                </div>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar" data-theme="c" data-iconpos="bottom">
+                <ul>
+                    <li><a href="#panelhome" data-icon="home"></a></li>
+                    <li><a href="#popupMenu" data-rel="popup" data-position-to="window" data-transition="slideup" data-position-to="origin" data-icon="grid"></a></li>
+                    <li><a href="#panelapp" data-icon="heart"></a></li>
+                </ul>
+            </div>
+            <div data-role="popup" id="popupMenu" data-theme="a" data-overlay-theme="a">
+                <ul data-role="listview" data-inset="true" data-theme="b" style="min-width: 240px;">
+                    <li data-icon="shop"><a href="#">ba商城</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <p align="center">
+                <a href="#">
+                    <img class="popphoto" src="images/bamain.png" height="160"></a>
+            </p>
+            <br>
+            <p align="center">
+                <a href="#">
+                    <img class="popphoto" src="images/balogo.png" height="20"></a>
+            </p>
+        </div>
     </div>
-    <div data-role="popup" id="popupMenu" data-theme="a"  data-overlay-theme="a">
-      <ul data-role="listview" data-inset="true" data-theme="b" style="min-width:240px;">
-        <li data-icon="shop"><a href="#">ba商城</a></li>
-      </ul>
-    </div>
-  </div>
-  <div data-role="content">
-    <p align="center"><a href="#"><img class="popphoto" src="images/bamain.png" height="160px"></a></p>
-    <br>
-    <p align="center"><a href="#"><img class="popphoto" src="images/balogo.png" height="20px"></a></p>
-  </div>
-</div>
 </body>
 </html>

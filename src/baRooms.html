@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ba labs</title>
+    <link rel="stylesheet" href="themes/bladecolor.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile.structure-1.4.2.min.css" />
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="vendor/Chart.js/Chart.min.js"></script>
+    <script src="vendor/knockoutjs/build/output/knockout-latest.js"></script>
+    <script src="js/ko.extentions.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/pages/baRooms.js"></script>
+</head>
+
+<body style="text-align: center;">
+    <div data-role="page" data-theme="a" id="one">
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li><a href="#popupMenu" data-rel="popup" data-position-to="window" data-transition="slideup" data-position-to="origin" data-icon="grid"></a></li>
+                </ul>
+            </div>
+            <div data-role="popup" id="popupMenu" data-theme="a" data-overlay-theme="a">
+                <ul data-role="listview" data-inset="true" data-theme="b" style="min-width: 240px;">
+                    <li data-icon="comment"><a href="#">ba links</a></li>
+                    <li data-icon="plus"><a href="addNewBa.html" rel="external">添加Ba</a></li>
+                    <li data-icon="home"><a href="signin.html" rel="external">主菜单</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <p align="center">
+                <a href="#two">
+                    <img alt="" class="popphoto" src="images/balogo.png" height="25"></a>
+            </p>
+            <div style="margin: auto; width: 80%; height: 80%;">
+                <canvas id="canvas" height="30" width="30"></canvas>
+            </div>
+            <ul data-role="listview" data-inset="true" style="min-width: 240px;">
+                <li data-role="list-divider" data-theme="b">我的环境</li>
+
+
+                <!--                <li><a href="r2.html" rel="external" data-transition="flip">
+                    <img src="Images/Glyphish/icons/116-controller@2x.png" alt="Germany" class="ui-li-icon">主卧<span class="ui-li-count">32度 | 55% | 优</span></a></li>
+                <li><a href="r2.html" rel="external">
+                    <img src="Images/Glyphish/icons/109-chicken@2x.png" alt="Germany" class="ui-li-icon">客厅<span class="ui-li-count">28度 | 65% | 优</span></a></li>-->
+
+                <!-- ko foreach:{ data:  $root.rooms , as: 'room' } -->
+                <li><a href="baRoom.html" rel="external">
+                    <img src="Images/Glyphish/icons/116-controller@2x.png" alt=""
+                        class="ui-li-icon"><span data-bind="text:description"></span><span class="ui-li-count">
+                            <!-- ko foreach: { data:  dimensions , as: 'dimension' } -->
+                            <span data-bind="text: datas&&datas[0]&&datas[0].description"></span>
+
+                            <!-- ko if:  datas&&datas[0] && $index()<3 -->
+                            |
+                                                                                         <!-- /ko -->
+                            <!-- /ko -->
+                        </span></a></li>
+                <!-- /ko -->
+
+            </ul>
+            <div class="ui-nodisc-icon ui-alt-icon">
+                <!-- Classes added to the wrapper -->
+                <p align="center">&nbsp &nbsp <a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-recycle ui-btn-icon-notext ui-btn-inline">next</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
