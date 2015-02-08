@@ -30,79 +30,32 @@
       });
 
    var vm = {
-      rooms: ko.observableArray()
+      rooms: ko.observableArray(),
+      viewRoom: function (data) {
+         location.href = "baRoom.html?" + $.param({ "roomId": data.roomId, "deviceSN": data.deviceSN, "addressId": data.addressId });
+      }
    };
+
    vm.refresh = function () {
-      var mapFun = function (data) {
-         var newData = {
-            "userId": data.userId,
-            "deviceSN": data.deviceSN,
-            "addressId": data.addressId,
-            "roomId": data.roomId,
-            "description": data.description,
-            "type": data.type,
-            "dimensions": []
-         };
+     
 
-         var temperature = data.temperature;
-         if (temperature) {
-            temperature.forEach(function (i) {
-               i.description = i.data + "度";
-            });
-            newData.dimensions.push({ "dimensionType": "temperature", datas: temperature });
-         }
-
-
-         var humidity = data.humidity;
-         if (humidity) {
-            humidity.forEach(function (i) {
-               i.description = i.data + "%";
-            });
-            newData.dimensions.push({ "dimensionType": "humidity", datas: humidity });
-         }
-
-         var pressure = data.pressure;
-         if (pressure) {
-            pressure.forEach(function (i) {
-               var num = parseInt(i.data / 100);
-               i.description = num + "百帕";
-            });
-            newData.dimensions.push({ "dimensionType": "pressure", datas: pressure });
-         }
-
-         var pm25 = data.pm25data;
-         if (pm25) {
-            pm25.forEach(function (i) {
-               i.description = config.pm25.filter(
-                  function (rule) {
-                     return rule.max > i.data && rule.min <= i.data;
-
-                  }
-               )[0].description;
-            });
-            newData.dimensions.push({ "dimensionType": "pm25data", datas: pm25 });
-         }
-         return newData;
-      };
       $.ajax({
          type: 'POST',
          url: config.baseUrl + "myBaOverview",
-         data: JSON.stringify({ "userId": 1 }),
+         data: JSON.stringify({ "userId": config.userId }),
          contentType: "application/json",
          dataType: "json"
       }).then(function (result) {
 
-         vm.rooms.splice(0, vm.rooms.length);
+         vm.rooms.removeAll();
          if (result && $.isArray(result)) {
             result.forEach(
                function (item) {
-                  vm.rooms.push(mapFun(item));
+                  vm.rooms.push(config.mapFun(item));
                }
             );
 
          }
-
-         window.a = vm;
       });
    };
 

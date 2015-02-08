@@ -50,15 +50,14 @@
                     <img src="Images/Glyphish/icons/109-chicken@2x.png" alt="Germany" class="ui-li-icon">客厅<span class="ui-li-count">28度 | 65% | 优</span></a></li>-->
 
                 <!-- ko foreach:{ data:  $root.rooms , as: 'room' } -->
-                <li><a href="baRoom.html" rel="external">
+                <li><a href="javascript:void(0);" data-bind="click:function(){$root.viewRoom($data)}" rel="external">
                     <img src="Images/Glyphish/icons/116-controller@2x.png" alt=""
                         class="ui-li-icon"><span data-bind="text:description"></span><span class="ui-li-count">
                             <!-- ko foreach: { data:  dimensions , as: 'dimension' } -->
                             <span data-bind="text: datas&&datas[0]&&datas[0].description"></span>
 
                             <!-- ko if:  datas&&datas[0] && $index()<3 -->
-                            |
-                                                                                         <!-- /ko -->
+                            &nbsp;|<!-- /ko -->
                             <!-- /ko -->
                         </span></a></li>
                 <!-- /ko -->
@@ -66,7 +65,7 @@
             </ul>
             <div class="ui-nodisc-icon ui-alt-icon">
                 <!-- Classes added to the wrapper -->
-                <p align="center">&nbsp &nbsp <a href="#two" class="ui-btn ui-shadow ui-corner-all ui-icon-recycle ui-btn-icon-notext ui-btn-inline">next</a></p>
+                <p align="center">&nbsp;&nbsp;<a href="javascript:void(0);" data-bind="click:refresh" class="ui-btn ui-shadow ui-corner-all ui-icon-recycle ui-btn-icon-notext ui-btn-inline">刷新</a></p>
             </div>
         </div>
     </div>
